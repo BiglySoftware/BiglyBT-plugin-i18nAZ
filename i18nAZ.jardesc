@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <jardesc>
-    <jar path="azi18n/i18nAZ.jar"/>
-    <options buildIfNeeded="true" compress="true" descriptionLocation="/azi18n/i18nAZ.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <jar path="i18nAZ/i18nAZ.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/i18nAZ/i18nAZ.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
     <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
     <selectedProjects/>
     <manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
@@ -11,11 +11,11 @@
         </sealing>
     </manifest>
     <selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
-        <javaElement handleIdentifier="=azi18n/&lt;images"/>
-        <javaElement handleIdentifier="=azi18n/&lt;images.langs"/>
-        <javaElement handleIdentifier="=azi18n/&lt;i18nAZ.internat"/>
-        <javaElement handleIdentifier="=azi18n/&lt;readme"/>
-        <javaElement handleIdentifier="=azi18n/&lt;i18nAZ"/>
-        <javaElement handleIdentifier="=azi18n/&lt;images.flags"/>
+        <javaElement handleIdentifier="=i18nAZ/&lt;i18nAZ"/>
+        <javaElement handleIdentifier="=i18nAZ/&lt;images"/>
+        <javaElement handleIdentifier="=i18nAZ/&lt;i18nAZ.internat"/>
+        <javaElement handleIdentifier="=i18nAZ/&lt;images.flags"/>
+        <javaElement handleIdentifier="=i18nAZ/&lt;images.langs"/>
+        <javaElement handleIdentifier="=i18nAZ/&lt;readme"/>
     </selectedElements>
 </jardesc>
