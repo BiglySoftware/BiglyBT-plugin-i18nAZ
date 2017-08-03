@@ -124,7 +124,7 @@ public class LocalizablePluginManager implements iTask
 
             public URL getInternalPath(TargetLocale targetLocale)
             {
-                return Path.getUrl(LocalizablePluginManager.LOCALIZABLE_PLUGIN_DIR + this.getParent().getName() + "\\" + this.jarFolder.replace('/', '.') + "\\" + this.getFileName(targetLocale));
+                return Path.getUrl(LocalizablePluginManager.LOCALIZABLE_PLUGIN_DIR + this.getParent().getName() + File.separator + this.jarFolder.replace('/', '.') + File.separator + this.getFileName(targetLocale));
             }
 
             public String getJarFolder()
@@ -190,7 +190,7 @@ public class LocalizablePluginManager implements iTask
                         properties = Util.loadLocaleProperties(targetLocale.getLocale(), this.getInternalPath(targetLocale));
                         if (properties == null)
                         {
-                            URL OriginalBundleURL = Path.getUrl(LocalizablePluginManager.LOCALIZABLE_PLUGIN_DIR + this.getParent().getName() + "\\" + this.jarFolder.replace('/', '.') + "\\" + this.getFileName(targetLocale) + ".original");
+                            URL OriginalBundleURL = Path.getUrl(LocalizablePluginManager.LOCALIZABLE_PLUGIN_DIR + this.getParent().getName() + File.separator + this.jarFolder.replace('/', '.') + File.separator + this.getFileName(targetLocale) + ".original");
                             properties = Util.getLocaleProperties((targetLocale == null) ? Util.EMPTY_LOCALE : targetLocale.getLocale(), OriginalBundleURL);
                             if (properties != null && properties.IsLoaded() == true && targetLocale.isReference() == true)
                             {

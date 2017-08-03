@@ -23,6 +23,8 @@ import java.util.Locale;
 import java.util.jar.JarEntry;
 import java.util.jar.JarInputStream;
 
+import com.biglybt.core.util.Constants;
+
 /**
  * Path class
  * 
@@ -62,7 +64,7 @@ public class Path
         {
             path = path.substring(5);
         }
-        if (path.startsWith("\\") == true)
+        if (path.startsWith("\\") == true && Constants.isWindows )
         {
             path = path.substring(1);
         }
@@ -72,6 +74,9 @@ public class Path
         }
         catch (UnsupportedEncodingException e)
         {
+        }
+        if ( !Constants.isWindows ) {
+        		path = path.replace('\\', '/');
         }
         for (int i = 1; i < part.length; i++)
         {
@@ -127,7 +132,7 @@ public class Path
         }
         else
         {
-            fileName = fileName.substring(fileName.lastIndexOf("\\") + 1);
+            fileName = fileName.substring(fileName.lastIndexOf(File.separator) + 1);
         }
         return fileName;
     }
@@ -523,6 +528,9 @@ public class Path
         else
         {
             path += "/unexistFile.file";
+        }
+        if ( !Constants.isWindows ) {
+        		path = path.replace( '\\', '/' );
         }
         return new File(path).getParentFile();
     }

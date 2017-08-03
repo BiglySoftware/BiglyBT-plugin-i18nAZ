@@ -103,7 +103,7 @@ public class i18nAZ implements UnloadablePlugin
         }
 
         LocalizablePluginManager.PLUGIN_CORE_DISPLAY_NAME = i18nAZ.getLocalisedMessageText("i18nAZ.Labels.DefaultPlugin");
-        LocalizablePluginManager.LOCALIZABLE_PLUGIN_DIR = i18nAZ.getPluginInterface().getPluginDirectoryName().toString() + "\\internat\\";
+        LocalizablePluginManager.LOCALIZABLE_PLUGIN_DIR = i18nAZ.getPluginInterface().getPluginDirectoryName().toString() + File.separator + "internat" + File.separator;
 
         i18nAZ.log("plugin dir: " + i18nAZ.getPluginInterface().getPluginDirectoryName().toString());
         Class<?> c = null;
