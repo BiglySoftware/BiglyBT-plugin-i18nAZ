@@ -137,7 +137,7 @@ public class RemotePluginManager implements iTask
                 try
                 {
                     remotePlugin.downloadURL = new URL(downloadURLString);
-                    remotePlugin.downloadTorrentURL = new URL(Constants.URL_PLUGINS + downloadURLString.substring(downloadURLString.lastIndexOf("/") + 1) + ".torrent");
+                    remotePlugin.downloadTorrentURL = new URL(Constants.URL_PLUGINS_TORRENT_BASE + downloadURLString.substring(downloadURLString.lastIndexOf("/") + 1) + ".torrent");
                 }
                 catch (MalformedURLException e)
                 {
