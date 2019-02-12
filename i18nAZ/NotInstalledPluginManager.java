@@ -48,7 +48,6 @@ import com.biglybt.pif.tracker.Tracker;
 import com.biglybt.pif.ui.UIManager;
 import com.biglybt.pif.ui.config.ConfigSection;
 import com.biglybt.pif.ui.config.Parameter;
-import com.biglybt.pif.ui.config.PluginConfigUIFactory;
 import com.biglybt.pif.update.UpdateManager;
 import com.biglybt.pif.utils.ShortCuts;
 import com.biglybt.pif.utils.Utilities;
@@ -98,35 +97,7 @@ public class NotInstalledPluginManager implements iTask
         {
             throw new NotImplementedException();
         }
-    
-        
-        @Override
-        public void addConfigUIParameters(Parameter[] parameters, String displayName) throws NotImplementedException
-        {
-            throw new NotImplementedException();
-        }
-    
-        
-        @Override
-        public void addConfigSection(ConfigSection section) throws NotImplementedException
-        {
-            throw new NotImplementedException();
-        }
-    
-        
-        @Override
-        public void removeConfigSection(ConfigSection section) throws NotImplementedException
-        {
-            throw new NotImplementedException();
-        }
-    
-        
-        @Override
-        public ConfigSection[] getConfigSections() throws NotImplementedException
-        {
-            throw new NotImplementedException();
-        }
-    
+   
         
         @Override
         public Tracker getTracker() throws NotImplementedException
@@ -281,14 +252,7 @@ public class NotInstalledPluginManager implements iTask
         {
             throw new NotImplementedException();
         }
-    
         
-        @Override
-        public PluginConfigUIFactory getPluginConfigUIFactory() throws NotImplementedException
-        {
-            throw new NotImplementedException();
-        }
-    
         
         @Override
         public ClassLoader getPluginClassLoader()
