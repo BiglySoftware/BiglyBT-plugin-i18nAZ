@@ -7,6 +7,7 @@ package i18nAZ;
 
 import com.biglybt.ui.UIFunctionsManager;
 import com.biglybt.ui.mdi.MdiEntry;
+import com.biglybt.ui.mdi.MdiEntryVitalityImage;
 import com.biglybt.ui.mdi.MultipleDocumentInterface;
 import i18nAZ.FilterManager.PrebuildItem;
 import i18nAZ.FilterManager.State;
@@ -4331,7 +4332,8 @@ class View implements UISWTViewCoreEventListener
                 }
                 if (initialized == false)
                 {
-                    if (View.this.sideBarEntry != null && View.this.sideBarEntry.getVitalityImages().length == 0)
+                    List<? extends MdiEntryVitalityImage> vitalityImages = View.this.sideBarEntry.getVitalityImages();
+                    if (View.this.sideBarEntry != null && vitalityImages.isEmpty())
                     {
                         View.this.sideBarEntry.addVitalityImage("image.sidebar.vitality.dots");
                     }
@@ -4341,9 +4343,9 @@ class View implements UISWTViewCoreEventListener
                         {
                             if (View.this.initialized.get() == true)
                             {
-                                if (View.this.sideBarEntry != null && View.this.sideBarEntry.getVitalityImages().length > 0)
+                                if (View.this.sideBarEntry != null && vitalityImages.size() > 0)
                                 {
-                                    View.this.sideBarEntry.getVitalityImages()[0].setVisible(false);
+                                    vitalityImages.get(0).setVisible(false);
                                 }
                                 TargetLocaleManager.notifyCountListeners(null);
                                 break;
